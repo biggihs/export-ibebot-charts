@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Export Ibebot Charts",
+  "version": "1.0",
+  "description": "Export the chart data from Ibebot ApexCharts as a CSV file.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://*.ibebot.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://*.ibebot.com/*"]
+    }
+  ]
+}
+
